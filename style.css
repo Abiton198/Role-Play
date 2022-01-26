@@ -1,0 +1,49 @@
+  
+header {
+    display: flex;
+    flex: 1;
+    background-color: teal;
+    flex-direction: row;
+    font-size: 18px;
+    color:peachpuff;
+    font-weight: bolder;
+    border: 15px solid;
+
+}
+
+img {
+    padding: 25px;
+    margin: 10px;
+    display: flex;
+    width: 150px;
+    height: 125px;
+
+}
+
+button {
+    margin: 10px;
+    width: 275px;
+    height: 45px;
+    border: 0 solid;
+    margin-top: 280px;
+    margin-right: -150px;
+    background-color: peru;
+    color: white;
+}
+
+.links {
+    text-decoration: none;
+    text-decoration-style: none;
+    text-decoration-line: underline;
+    margin-right: 100px;
+    margin-top: 85px;
+}
+.sub {
+    text-align: center;
+    text-decoration: indigo;
+    margin: 10px;
+    border: 10px;
+    text-emphasis-style: none;
+    color: burlywood;
+    font-style: oblique;
+}
