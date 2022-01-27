@@ -22,12 +22,14 @@ img, .images {
 
 button {
     margin: 10px;
-    width: 218px;
+    width: 210px;
     height: 45px;
     margin-top: 280px;
-    margin-right: 31px;
-    background-color:brown;
+    margin-right: 4px;
+    background-color:blueviolet;
     color: white;
+    font-size: 10px;
+    font-weight: bolder;
 }
 
 .links {
@@ -65,4 +67,9 @@ button {
     text-align: center;
     font-style: italic;
     margin-top: 250px;
+    background: coral;
+}
+.logo {
+    padding: 15px;
+    align-self: flex-start;
 }
