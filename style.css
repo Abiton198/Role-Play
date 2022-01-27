@@ -10,14 +10,23 @@ header {
 
 }
 
-img, .images {
+img {
     padding: 25px;
-    margin: 10px;
+    margin: -18px;
     display: flex;
-    width: 150px;
+    width: 165px;
     height: 125px;
     display: initial; 
 
+}
+.images {
+    padding: 132px;
+    margin: -10px;
+    display: flex;
+    width: 165px;
+    height: 125px;
+    display: initial; 
+   
 }
 
 button {
@@ -30,8 +39,13 @@ button {
     color: white;
     font-size: 10px;
     font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
+button {
+    hover{background-color:}
+}
 .links {
     text-decoration: none;
     text-decoration-style: none;
@@ -59,7 +73,6 @@ button {
     flex-direction: initial;
     color: brown;
     font-style: oblique;
-    background: bisque;
     padding: 15px;
 }
 .body {
@@ -68,8 +81,16 @@ button {
     font-style: italic;
     margin-top: 250px;
     background: coral;
+    height: 100px;
+    padding: 125px;
+    
 }
 .logo {
     padding: 15px;
     align-self: flex-start;
+}
+.brand {
+    padding: 226px;
+    color:purple;
+    font-style: oblique;
 }
