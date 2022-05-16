@@ -1,0 +1,145 @@
+html {
+    font-family: ubuntu;
+    font-size: 18px;
+}
+body {
+    //align-content: center;
+    background: #F8F8F8;
+}
+.container{
+    background: blue;
+    text-align: center;
+    max-width: 100%;
+}
+/* ----------------------
+Header and Main Content
+-------------------------- */
+.header {
+    background:#F8F8F8;
+    align-items: center;
+}
+
+.head {
+    font-size: 36px;
+    color:#143774;
+    margin: 50px 0 0;
+    padding: 0;
+    border:solid green;
+}
+
+.blog {
+    color: #1792D2;
+    letter-spacing:2.4px;
+    font-size: 12px;
+    padding: 2px;
+    margin: 0px;
+    font-style: bold;
+    //border: solid red;
+}
+/* ====================
+        links
+======================= */
+.links{
+    display: flex;
+    flex-direction: row;
+}
+.li {
+   margin: 150px;
+   align-content:center;
+    
+}
+.links a  {
+    color:  #717171;
+    text-decoration: none;  
+}
+.li:hoover,
+.li:focus {
+    color: green;
+}
+
+.headings {
+    color:#143774;
+    font-size:24px;
+}
+
+.main-top {
+    color:#707070;
+}
+
+.simple{
+    color:#1792D2;
+    text-decoration: underline;
+}
+.continue {
+    color: #1792D2;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+
+}
+img {
+    width: 518px;
+}
+
+.sub-titles{
+    color:#143774;
+    font-size:24px;
+}
+.sub-head {
+    color:#143774;
+}
+.recent-posts{
+    border:solid #EBEBEB 20px;
+    padding: 10px 0;
+}
+@media (max-width:550px) {
+  
+    .links {
+        display:flex;
+        flex-direction: column;
+        border: solid yellow;
+        padding: 20px;
+    }
+    .li {
+        border: solid yellow;
+        margin: 0 110px;
+        padding: 0;
+        
+    }
+    img{
+        max-width: 100%;
+        margin: 0 15px;
+
+    }
+    body {
+        max-width:500px;
+    }
+    .container {
+        align-content: center;
+        border: solid red;
+
+    }
+    .main-content{
+        width: 500px;
+        margin:0 15px;
+        align-content: justify;
+    }
+}
+.solid-border {
+    
+}.articles{
+    height: 87px;
+    object-fit:cover;
+    width: 100%;
+    background-position: center;
+    margin: 0px;
+
+}
+
+@media (max-width: 750px) {
+    img{
+        max-width: auto;
+    }
+    .container{
+
+    }
+}
