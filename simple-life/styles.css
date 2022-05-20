@@ -1,15 +1,27 @@
 html {
     font-family: ubuntu;
-    font-size: 18px;
+   font-size: 18px;
 }
 body {
-    //align-content: center;
+   align-content: center;
     background: #F8F8F8;
+    margin: 0 100px;
 }
 .container{
-    background: blue;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
+    margin: 0 0px;
+   
+}
+.footer{
+    background-color: #143774;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    height: 172px;
+    padding-top: 60px;
+    margin: 30px 0 0 0;
+    width:auto;
 }
 /* ----------------------
 Header and Main Content
@@ -24,9 +36,7 @@ Header and Main Content
     color:#143774;
     margin: 50px 0 0;
     padding: 0;
-    border:solid green;
 }
-
 .blog {
     color: #1792D2;
     letter-spacing:2.4px;
@@ -34,26 +44,27 @@ Header and Main Content
     padding: 2px;
     margin: 0px;
     font-style: bold;
-    //border: solid red;
 }
 /* ====================
         links
 ======================= */
-.links{
+.linked{
     display: flex;
     flex-direction: row;
+    margin: 20px 10px;
 }
 .li {
-   margin: 150px;
+   margin: 60px 20px 10px 150px;
+   padding: 20px;
    align-content:center;
-    
+    text-decoration: none; 
+    color:  #717171;  
 }
-.links a  {
-    color:  #717171;
-    text-decoration: none;  
+.linked li   {
+    list-style: none;    
 }
-.li:hoover,
-.li:focus {
+ .linked .li :hoover,
+ .linked .li :focus {
     color: green;
 }
 
@@ -62,6 +73,20 @@ Header and Main Content
     font-size:24px;
 }
 
+.wrapper {
+    border-top: black solid .1px;
+    display: flex;
+    align-items: center;
+}
+/* ===================================
+    Main body
+=======================================*/
+.main-content {
+    margin: 10px 20px;
+    padding: 0 20px;
+    width: 390%;
+    text-align: left;
+}
 .main-top {
     color:#707070;
 }
@@ -74,40 +99,148 @@ Header and Main Content
     color: #1792D2;
     text-transform:uppercase;
     letter-spacing: 2px;
-
+    text-align: left;
 }
 img {
-    width: 518px;
+    width: 100%;
+    margin-top: 20px;
 }
-
-.sub-titles{
+.headings {
+    margin: 10px;
+    text-align: left;
+}
+.display-final {
+    display: flex;
+}
+.solid-border {
+    margin: 0 20px;
+}
+.sub-titles {
     color:#143774;
-    font-size:24px;
+    font-size:1.33em;
 }
 .sub-head {
     color:#143774;
 }
 .recent-posts{
-    border:solid #EBEBEB 20px;
-    padding: 10px 0;
+    padding: 20px 5px;
+    margin: 20px 0px;
+    color: #143774;
+    border: #EBEBEB  solid 20px;
 }
+.person{
+    border:#EBEBEB solid 20px;
+    color: #143774;
+    font-size: 16px;
+    padding: 10px 5px;
+    margin-top: 20px;
+}
+
+/* =================================
+    ABOUT - ME page
+====================================*/
+body {
+    margin: 0px 100px 0;
+}
+/* display page with content side by side */
+.about-me-display {
+    display: flex;
+    margin: 0;
+}
+.about-recent-posts{
+    border: #EBEBEB solid 20px;
+    margin: 20px 0 20px 30px;
+    padding: 20px;
+    max-width: 240px;
+    height:fit-content;
+}
+/* display heading and links in same line */
+.heading{
+display: flex;
+}
+.about-header{
+    text-align: center;
+}
+.about-me-links  {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 50px 100px;
+    padding: 0 0 0 200px;
+}
+.about-me-links li {
+    list-style: none;
+    font-size: 16px;
+    padding-top: 40px;
+    align-self: right;
+    margin: 0px 0px 0px 90px;   
+}
+.about-me-links li a {
+    text-decoration:none;
+    margin: 0;
+    padding: 0;   
+}
+.about-me-links .li a:hoover, 
+.about-me-links .li a:focus{
+color: blueviolet;
+}
+/* ================================
+      The Main text in About-me 
+=================================== */
+.about-me {
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.name {
+    color: #143774;
+}
+.turn-point {
+    color: #1792D2;
+}
+
+/* =================================
+    RECENT-POSTS Page
+==================================== */
+.recent-main{
+    display: flex;
+}
+.recent-img-top{
+    width: 20%;
+    height: fit-content;
+}
+.recent-img{
+    width: 100%;
+    height: fit-content;
+}
+.display-top {
+    display: flex; 
+    flex-direction: column;
+    margin: 0 30px;
+    padding: 0;
+    text-align: left;
+}
+/*===================================
+    media queries - mobile view
+ ====================================*/
 @media (max-width:550px) {
   
     .links {
         display:flex;
         flex-direction: column;
-        border: solid yellow;
-        padding: 20px;
+        padding: 1.666em;
+        margin: 0px;
     }
-    .li {
-        border: solid yellow;
-        margin: 0 110px;
-        padding: 0;
-        
+    .li{
+        margin: 0px;
+        padding: 0px;
+     
+     /* to adjust the spacing in links */
     }
     img{
-        max-width: 100%;
-        margin: 0 15px;
+        max-width: 95%;
+        margin: 10px 5px 0 5px;
+        padding: 0;
 
     }
     body {
@@ -115,18 +248,18 @@ img {
     }
     .container {
         align-content: center;
-        border: solid red;
+        
 
     }
     .main-content{
-        width: 500px;
-        margin:0 15px;
-        align-content: justify;
+        margin:0 10px;
+        padding: 0 10px;
+        align-items: center;
+        width: fit-content;
+        letter-spacing: .5px;
     }
-}
-.solid-border {
-    
-}.articles{
+
+.articles{
     height: 87px;
     object-fit:cover;
     width: 100%;
@@ -135,11 +268,76 @@ img {
 
 }
 
-@media (max-width: 750px) {
-    img{
-        max-width: auto;
-    }
-    .container{
-
-    }
 }
+/* ==============ISSUES=============
+1. change all px to em
+2. sort issue of hoover on links
+3. clean code DRY
+4. Make underline link on current page 
+5. work on mobile view
+ */
+
+/*
+@media (min-width: 1200px) {
+    img{
+        width: 100%;
+        margin-top: 20px;        
+    }
+
+    .container{
+width: fit-content;
+margin: 0 150px;
+    }
+
+    .links {
+        
+        display:flex;
+        flex-direction:row;
+        margin: 20px 10px;
+    }
+    .li {
+        margin: 60px 20px 10px 150px;
+        padding: 20px;
+        
+    }
+    .wrapper{
+        border-top: black solid .1px;
+        display: flex;      
+        align-items: center ;  
+    }
+.main-content{    
+    margin: 10px 20px;
+    padding: 0 20px;
+    width: 390%;
+}
+.headings {
+    margin: 10px;
+}
+
+.display-final {
+    display: flex;
+}
+
+.solid-border{
+    margin: 0 20px;
+}
+.recent-posts{
+    margin: 20px 0px;
+    padding: 20px;
+    color:#143774;
+}
+.person {
+    border:#EBEBEB solid 20px;
+    color: #143774;
+    font-size: 16px;
+    padding: 10px 5px;
+    margin-top: 20px;
+}
+}
+ tasks
+
+1- to change all px to em 
+2- create link pages
+3-loook into mobile view -media queries *****
+
+*/
