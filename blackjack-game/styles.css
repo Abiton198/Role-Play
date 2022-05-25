@@ -36,3 +36,9 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+.player-el {
+    color: gold;
+    letter-spacing: 2px;
+    text-align: center;
+}
