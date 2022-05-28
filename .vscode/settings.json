@@ -1,8 +1,0 @@
-{
-    "livePreview.defaultPreviewPath": "/scrimba/rpg-index.html",
-    "editor.tabCompletion": "on",
-    "files.autoSave": "afterDelay",
-    "editor.fontSize": 16,
-    "editor.fontFamily": "Consolas, 'Courier New', monospace, ubuntu",
-    "editor.suggest.preview": false
-}
