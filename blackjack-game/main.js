@@ -2,11 +2,8 @@ let player = {
     name: "Abiton",
     chips: 300
 }
-let isAlive = true
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-   // let cards = [firstCard, secondCard]
-    //let sum = firstCard + secondCard
+
+let isAlive = false
    let cards = []
 let sum = 0 
 let hasBlackJack = false
@@ -18,16 +15,26 @@ let playerEl = document.getElementById("player-el")
 //let start = c
 
 playerEl.textContent = player.name + ": $" + player.chips
+
+
 document.getElementById("start").addEventListener("click", function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    //start.style.display = "none"
+    //reset.style.display = "block"
     renderGame()
-   
+    
 }) 
 
 
 function renderGame(){
-   
+    
+    cardsEl.textContent ="Cards: "
     for(let i = 0; i < cards.length; i++){
-        cardsEl.textContent ="Cards: " + cards 
+        cardsEl.textContent += cards[i] + " " 
     }
     sumEl.textContent = "sum: " + sum
     if(sum < 21){
@@ -50,7 +57,7 @@ function getRandomCard() {
         return 11
     }else {
         return randomNumber
-    }
+     }
 } 
 getRandomCard()
 
@@ -63,11 +70,30 @@ document.getElementById("new").addEventListener("click", function newCard(){
     }
 })
 
+
 document.getElementById("reset").addEventListener("click", function reset(){
-    if(isAlive === false){
-        cardsEl.textContent = 0
-        sumEl.textContent = 0
-        messageEl.textContent = "This is a New Game!"
-    }
+    hasBlackJack === true 
+    isAlive === false 
+    cardsEl.textContent = 0
+    sumEl.textContent = 0
+    messageEl.textContent = "This is a New Game!"
+    reset.style.display = "block"
+    start.style.display = "none"
+    start.classList.remove("active")
+    reset.classList.add("active")
 })
 reset()
+
+
+
+function celebration() {
+    if (hasBlackJack === true){
+        document.getElementsByClassName("container").textContent = "CONGRATULATIONS!!!!"
+    }
+}
+
+/*=========ISSUES TO BE SOLVED===========
+
+1. Reset Button not displaying after end game
+2. Chips amount money to be active
+3. Celebration function not active*/
