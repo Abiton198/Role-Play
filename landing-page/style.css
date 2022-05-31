@@ -1,0 +1,96 @@
+  
+header {
+    display: flex;
+    flex: 1;
+    background-color: teal;
+    flex-direction: row;
+    font-size: 18px;
+    color:peachpuff;
+    font-weight: bolder;
+
+}
+
+img {
+    padding: 25px;
+    margin: -18px;
+    display: flex;
+    width: 165px;
+    height: 125px;
+    display: initial; 
+
+}
+.images {
+    padding: 132px;
+    margin: -10px;
+    display: flex;
+    width: 165px;
+    height: 125px;
+    display: initial; 
+   
+}
+
+button {
+    margin: 10px;
+    width: 210px;
+    height: 45px;
+    margin-top: 280px;
+    margin-right: 4px;
+    background-color:blueviolet;
+    color: white;
+    font-size: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button {
+    hover{background-color:}
+}
+.links {
+    text-decoration: none;
+    text-decoration-style: none;
+    text-decoration-line: underline;
+    margin-right: 100px;
+    margin-top: 85px;
+}
+.sub {
+    text-align: center;
+    text-decoration: indigo;
+    margin: 10px;
+    border: 10px;
+    text-emphasis-style: none;
+    color: burlywood;
+    font-style: oblique;
+}
+
+.images {
+    display: inline-flex;
+    border: initial;
+}
+
+.info {
+    display: flex;
+    flex-direction: initial;
+    color: brown;
+    font-style: oblique;
+    padding: 15px;
+}
+.body {
+    color: blue;
+    text-align: center;
+    font-style: italic;
+    margin-top: 250px;
+    background: coral;
+    height: 100px;
+    padding: 125px;
+    
+}
+.logo {
+    padding: 15px;
+    align-self: flex-start;
+}
+.brand {
+    padding: 226px;
+    color:purple;
+    font-style: oblique;
+}
