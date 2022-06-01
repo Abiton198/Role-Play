@@ -1,96 +1,87 @@
-  
-header {
+/*=======
+MAIN DESIGN
+===*/
+body{
+    margin: 0;
+}
+.container {
     display: flex;
-    flex: 1;
-    background-color: teal;
-    flex-direction: row;
-    font-size: 18px;
-    color:peachpuff;
-    font-weight: bolder;
+}  
+.conta-el {
+    background-image: url(/landing-page/img/tech-pic.jpeg);
+    background-position: center;
+    background-size: cover;
 
 }
-
-img {
-    padding: 25px;
-    margin: -18px;
-    display: flex;
-    width: 165px;
-    height: 125px;
-    display: initial; 
-
-}
-.images {
-    padding: 132px;
-    margin: -10px;
-    display: flex;
-    width: 165px;
-    height: 125px;
-    display: initial; 
-   
+.cont-el{
+      background-image: linear-gradient(50deg, white, rgb(65, 55, 55), grey)
 }
 
 button {
-    margin: 10px;
+   
     width: 210px;
     height: 45px;
-    margin-top: 280px;
-    margin-right: 4px;
     background-color:blueviolet;
     color: white;
+    border-radius: 10px;
     font-size: 10px;
     font-weight: bolder;
-    cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-button {
-    hover{background-color:}
+button:hover, cursor{
+    background-color: greenyellow
 }
-.links {
-    text-decoration: none;
-    text-decoration-style: none;
-    text-decoration-line: underline;
-    margin-right: 100px;
-    margin-top: 85px;
+
+.order {
+    display: flex;
+    margin: 150px;
+}
+
+/*====SIDE 1 with background picture==*/
+
+.base {
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 0;
+   
+    color: rgb(247, 246, 248);
+    }
+.ideal {
+    font-size: 18px;
+    margin: 0;
+    color: #a6ebd6;
 }
 .sub {
-    text-align: center;
-    text-decoration: indigo;
-    margin: 10px;
-    border: 10px;
-    text-emphasis-style: none;
-    color: burlywood;
-    font-style: oblique;
+    margin: 450px 100px 0 ;
+    font-weight: 900;
+    color: #db1111;
+    font-size: 21px;
+    text-align: justify;
 }
-
-.images {
-    display: inline-flex;
-    border: initial;
-}
-
 .info {
-    display: flex;
-    flex-direction: initial;
-    color: brown;
-    font-style: oblique;
-    padding: 15px;
+    margin: 150px;
 }
-.body {
-    color: blue;
-    text-align: center;
-    font-style: italic;
-    margin-top: 250px;
-    background: coral;
-    height: 100px;
-    padding: 125px;
-    
+.bottom {
+    margin: 100px;
+    padding: 30px;
 }
-.logo {
-    padding: 15px;
-    align-self: flex-start;
+
+/*====SIDE 2 without background picture==*/
+.subscribe {
+    margin: 10px;
+    font-size: 16px;
+    background-color: red;
+
 }
-.brand {
-    padding: 226px;
-    color:purple;
-    font-style: oblique;
+input {
+    margin: 10px;
+}
+
+.plain-text {
+    margin: 150px 50px 30px;
+    font-size: 22px;
+    color: rgb(1, 1, 2);
 }
