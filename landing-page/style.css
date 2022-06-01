@@ -6,6 +6,7 @@ body{
 }
 .container {
     display: flex;
+    width: fit-content;
 }  
 .conta-el {
     background-image: url(/landing-page/img/tech-pic.jpeg);
@@ -14,18 +15,15 @@ body{
 
 }
 .cont-el{
-      background-image: linear-gradient(50deg, white, rgb(65, 55, 55), grey)
+      background-image: linear-gradient(50deg, white, rgb(155, 92, 92), rgb(163, 148, 148))
 }
 
 button {
    
     width: 210px;
     height: 45px;
-    background-color:blueviolet;
     color: white;
     border-radius: 10px;
-    font-size: 10px;
-    font-weight: bolder;
     transition: all 0.3s ease 0s;
 }
 
@@ -55,29 +53,40 @@ button:hover, cursor{
     color: #a6ebd6;
 }
 .sub {
-    margin: 450px 100px 0 ;
+    margin: 250px 15px 0 15px;
     font-weight: 900;
-    color: #db1111;
+    color: #1a1212;
     font-size: 21px;
     text-align: justify;
 }
 .info {
-    margin: 150px;
+    margin: 120px 0px 0 100px ;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(253, 7, 40);
+    font-size: 28px;
 }
 .bottom {
-    margin: 100px;
+    margin: 200px 100px 50px 100px;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 /*====SIDE 2 without background picture==*/
-.subscribe {
-    margin: 10px;
+.subscriber {
+    margin: 10px 0 20px 150px;
     font-size: 16px;
     background-color: red;
 
 }
 input {
     margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
 }
 
 .plain-text {
