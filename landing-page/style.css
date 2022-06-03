@@ -9,13 +9,13 @@ body{
     width: fit-content;
 }  
 .conta-el {
-    background-image: url(/landing-page/img/tech-pic.jpeg);
+    background-image: url(/landing-page/img/tech.jpeg);
     background-position: center;
     background-size: cover;
 
 }
 .cont-el{
-      background-image: linear-gradient(50deg, white, rgb(155, 92, 92), rgb(163, 148, 148))
+     // background-image: linear-gradient(50deg, white, rgb(155, 92, 92), rgb(163, 148, 148))
 }
 
 button {
@@ -53,7 +53,7 @@ button:hover, cursor{
     color: #a6ebd6;
 }
 .sub {
-    margin: 250px 15px 0 15px;
+    margin: 250px 35px 0 15px;
     font-weight: 900;
     color: #1a1212;
     font-size: 21px;
@@ -77,7 +77,7 @@ button:hover, cursor{
 
 /*====SIDE 2 without background picture==*/
 .subscriber {
-    margin: 10px 0 20px 150px;
+    margin: 10px 80px 20px 120px;
     font-size: 16px;
     background-color: red;
 
@@ -90,7 +90,22 @@ input {
 }
 
 .plain-text {
-    margin: 150px 50px 30px;
+    margin: 150px 50px 10px 50px;
+    padding: 20px;
     font-size: 22px;
     color: rgb(1, 1, 2);
+}
+
+.tick {
+    width: 28px; height: auto;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.bullets {
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    margin-bottom: 0;
+    padding: 0;
 }
