@@ -5,28 +5,8 @@ body{
     margin: 0;
     padding: 0;
 }
-.container {
-    margin: 0;
-    width: 100%;
-    background-image: url(/landing-page/img/tech.jpeg);
-    background-position: center;
-    background-size: cover;
 
-}
-
-button {
-   
-    width: 210px;
-    height: 45px;
-    color: white;
-    border-radius: 10px;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover, cursor{
-    background-color: rgb(121, 12, 223)
-}
-
+/* =========COMPANY NAME/ HEADING========= */
 .base {
     letter-spacing: 3px;
     font-size: 45px;
@@ -39,14 +19,17 @@ button:hover, cursor{
     margin: 0;
     color: #a6ebd6;
 }
-.sub {
-    margin: 250px 35px 0px 15px;
-    font-weight: 900;
-    padding-bottom: 170px;
-    color: #e9d0d0;
-    font-size: 21px;
-    text-align: center;
+
+/* =======BACKGROUND DESIGN======= */
+.container {
+    margin: 0;
+    width: 100%;
+    background-image: url(/landing-page/img/tech.jpeg);
+    background-position: center;
+    background-size: cover;
+
 }
+/* =====MAIN MESSAGE IN BOLD===== */
 .info {
     margin: 120px 0px 0 180px ;
     text-align: center;
@@ -56,14 +39,27 @@ button:hover, cursor{
     font-size: 28px;
 }
 
-.subscriber {
-    margin: 10px 80px 20px 120px;
-    font-size: 16px;
-    background-color: red;
-    align-content: flex-end;
-
+/* =================Sign-up Button=========== */
+button {
+   
+    width: 210px;
+    height: 45px;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
 }
 
+button:hover, cursor{
+    background-color: rgb(121, 12, 223)
+}
+.subscriber {
+    margin: 40px 0px 50px 600px;
+    font-size: 21px;
+    font-weight: 900;
+    background-color: red;
+}
+
+/* =============Products & Services with green ticks============== */
 .tick {
     width: 28px; height: auto;
     margin-left: 100px;
@@ -75,9 +71,26 @@ button:hover, cursor{
     margin-left: 50px;
 }
 
+
+
+
+
+
+
+
 .bullets {
     display:flex;
     font-size: 21px;
     margin-bottom: 0;
     color: rgb(235, 252, 1);
+}
+/* ========BOTTOM MESSAGE======== */
+
+.sub {
+    font-weight: 900;
+   font-style: italic;
+    color: #e9d0d0;
+    font-size: 25px;
+    text-align: center;
+    
 }
