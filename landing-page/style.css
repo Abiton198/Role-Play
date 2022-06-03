@@ -7,14 +7,14 @@ body{
 }
 
 /* =========COMPANY NAME/ HEADING========= */
-.base {
+.name {
     letter-spacing: 3px;
     font-size: 45px;
     font-weight: 900;
-    margin-bottom: 0;   
+    margin: 0;   
     color: rgb(181, 126, 236);
     }
-.ideal {
+.below-name {
     font-size: 18px;
     margin: 0;
     color: #a6ebd6;
@@ -52,7 +52,7 @@ button {
 button:hover, cursor{
     background-color: rgb(121, 12, 223)
 }
-.subscriber {
+.sign-up {
     margin: 40px 0px 50px 600px;
     font-size: 21px;
     font-weight: 900;
@@ -67,16 +67,8 @@ button:hover, cursor{
     
 }
 .green-tick{
-   
-    margin-left: 50px;
+       margin-left: 50px;
 }
-
-
-
-
-
-
-
 
 .bullets {
     display:flex;
@@ -86,7 +78,7 @@ button:hover, cursor{
 }
 /* ========BOTTOM MESSAGE======== */
 
-.sub {
+.sub-info {
     font-weight: 900;
    font-style: italic;
     color: #e9d0d0;
