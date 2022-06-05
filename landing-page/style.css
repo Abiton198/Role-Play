@@ -24,7 +24,8 @@ body{
 .container {
     margin: 0;
     width: 100%;
-    background-image: url(/landing-page/img/tech.jpeg);
+    height: auto;
+    background-image: url(/Landing-Page/landing-page/img/tech.jpg);
     background-position: center;
     background-size: cover;
 
