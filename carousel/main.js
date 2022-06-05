@@ -24,7 +24,7 @@ function hideAllIndicators (){
 
     for (let indicator of indicators){
         indicator.classList.remove("current-slide")
-        indicator.classList.add("carousel-indicators-hidden")
+       indicator.classList.add("carousel-indicators-hidden")
     }
 }
 // move slide using the next slide button
@@ -32,7 +32,6 @@ function hideAllIndicators (){
     function moveToNextSlide(){
         hideAllIndicators ()
         hideAllSlides()
-        moveWithCurrentSlide()
         moveDownCurrentSlide()
       
         if(slidePosition === totalSlides -1){
@@ -50,7 +49,6 @@ function hideAllIndicators (){
 function moveToPrevSlide(){
     hideAllIndicators ()
     hideAllSlides()
-    moveWithCurrentSlide()
     moveDownCurrentSlide()
     
     if (slidePosition === 0) {
