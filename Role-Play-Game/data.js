@@ -13,8 +13,8 @@ const characterData = {
         elementId:'monster',
         name:'orc',
         avatar:'images/orc.png',
-        health:'10',
-        diceCount:2,
+        health:'40',
+        diceCount:1,
         currentDiceScore: []
     }
 }

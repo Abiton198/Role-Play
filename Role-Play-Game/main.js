@@ -15,13 +15,14 @@ function attack(){
     wizard.takeDamage(orc.currentDiceScore)
     orc.takeDamage(wizard.currentDiceScore)  
    render()
-   if(wizard.health === 0 || orc.health === 0){
+   if(wizard.health === 0 || orc.health === 0){ //ternary operator
        endGame()
    }
 }
 document.getElementById("attack-button").addEventListener('click', attack)
 
 function endGame(){
+    // using the ternary operator to set condition (replacing If Condition)
     const endMessage = wizard.health === 0 && orc.health === 0 ?'no victors - all creatures are dead':
     wizard.health > 0? 'The Wizard Wins':
     'Orc is Victorious' 
@@ -33,3 +34,6 @@ function endGame(){
     </div>`
 
 }
+
+// صنف = class
+// انتها الملب = Game End

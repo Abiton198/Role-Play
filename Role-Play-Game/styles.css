@@ -202,3 +202,9 @@ button:focus { outline: 0 }
 .end-emoji{
     font-size: 80px;
 }
+
+/* percentage health Bar */
+
+.percentageBar {
+    border-top: solid green 5px;
+}
