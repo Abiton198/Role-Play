@@ -17,11 +17,23 @@ function attack(){
     wizard.takeDamage(monster.currentDiceScore)
     monster.takeDamage(wizard.currentDiceScore)  
    render()
-   if(wizard.health === 0 || monster.health === 0){ //ternary operator
-       endGame()
-   }
-}
+   
+//    CONDITIONS to endGame() or BRING more monsters to fight 
+  
+if(wizard.dead){
+    endGame()
+} else if(monster.dead){ 
+        if(monstersArray.length > 0){
+             monster = getNewMonster()  //get new monster
+              render() // to display the new monsters
+        } else{
+            endGame()
+            }}
+        }
 document.getElementById("attack-button").addEventListener('click', attack)
+
+
+
 
 function endGame(){
     // using the ternary operator to set condition (replacing If Condition)

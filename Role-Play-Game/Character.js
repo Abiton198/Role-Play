@@ -16,7 +16,7 @@ this.getHealthBarHtml = function (){
    
     return `<div class="health-bar-outer">
             <div class="health-bar-inner ${percent < 26 ? "danger" : ""} "
-             style="width: ${percent} %">
+             style="width:${percent}%">
             </div>
             </div>`
 
