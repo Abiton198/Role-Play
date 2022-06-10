@@ -208,3 +208,22 @@ button:focus { outline: 0 }
 .percentageBar {
     border-top: solid green 5px;
 }
+
+.health-bar-outer {
+    background: #171217;
+    height: 1vh;
+    width:90%;
+    margin: 0 5%;
+    border-radius: 2px;
+}
+
+.health-bar-outer .health-bar-inner {
+    background: #466d34;
+    height: 100%;
+    border-radius: 2px;
+}
+
+
+.health-bar-outer .health-bar-inner.danger {
+    background:#d1435f;
+}

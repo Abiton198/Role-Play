@@ -1,13 +1,10 @@
-import {getDiceRollArray} from './utils.js'
-import {getDicePlaceHolderHtml} from './utils.js'
+
+import {getDicePlaceHolderHtml, getPercentage, getDiceRollArray} from './utils.js'
 
 
-// making the game calculate percentage for remaing health
-
-const getPercentage = (remainingHealth, maximumHealth) => 
-    (100 * remainingHealth) / maximumHealth
 
 
+// constructor function - starts with a capital letter always (C)
        function Character(data) {
     
         Object.assign(this,data)
@@ -16,8 +13,15 @@ const getPercentage = (remainingHealth, maximumHealth) =>
 // making a percentage bar
 this.getHealthBarHtml = function (){
     const percent = getPercentage(this.health, this.maxHealth)
-    
+   
+    return `<div class="health-bar-outer">
+            <div class="health-bar-inner ${percent < 26 ? "danger" : ""} "
+             style="width: ${percent} %">
+            </div>
+            </div>`
+
 }
+// document.getElementsByClassName("health-bar-outer")
      
         // function to reduce the health-score using .reduce()
         this.takeDamage = function (attackScoreArray){
@@ -47,9 +51,10 @@ this.getHealthBarHtml = function (){
              <h4 class="name"> ${name} </h4>
              <image class="avatar" src="${avatar}"/>
              <p class="health">health: <b> ${health} </b></p>
+             ${healthBar}                   
              <div class="dice-container">${this.diceArray}</div>
              </div>
-             <div class = "percentageBar"> % Bar </div>`
+             `
      } //making the dice roll empty display
     }
 

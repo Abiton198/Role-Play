@@ -13,4 +13,10 @@ function getDicePlaceHolderHtml(diceCount){
     }).join('')
 }//making the riceRoll display empty 
 
-export {getDiceRollArray, getDicePlaceHolderHtml}
+const getPercentage = (remainingHealth, maximumHealth) => 
+    (100 * remainingHealth) / maximumHealth
+
+// making the game calculate percentage for remaing health
+
+
+export {getDiceRollArray, getDicePlaceHolderHtml, getPercentage}
