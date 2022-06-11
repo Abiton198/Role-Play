@@ -3,6 +3,7 @@ import Character from './Character.js'
 
 // new monsters to come after the other is dead
 let monstersArray = ["orc", "demon", "goblin"]
+let isWaiting = false //to disable the button when monster is dead and game is ended
 
 function getNewMonster(){
     
@@ -12,43 +13,49 @@ function getNewMonster(){
 
 //evocks the attack button
 function attack(){
-    wizard.getDiceHtml()
-   monster.getDiceHtml()
-    wizard.takeDamage(monster.currentDiceScore)
-    monster.takeDamage(wizard.currentDiceScore)  
-   render()
-   
-//    CONDITIONS to endGame() or BRING more monsters to fight 
-  
-if(wizard.dead){
-    endGame()
-} else if(monster.dead){ 
+
+    if (!isWaiting){  
+        wizard.setDiceHtml()
+        monster.setDiceHtml()
+        wizard.takeDamage(monster.currentDiceScore)
+        monster.takeDamage(wizard.currentDiceScore)  
+        render()
+    
+   //    CONDITIONS to endGame() or BRING more monsters to fight 
+        if(wizard.dead){
+        endGame()
+        } 
+        else if(monster.dead){ 
+        isWaiting = true
         if(monstersArray.length > 0){
-             monster = getNewMonster()  //get new monster
-              render() // to display the new monsters
-        } else{
-            endGame()
-            }}
+            setTimeout(()=> {               //to delay coming of new monster by 1sec = 1000
+                monster = getNewMonster()   //bring more monsters
+                render()                    // to display the new monsters
+                isWaiting = false
+                }, 2000)              
+            } else{
+               endGame() 
+                }
+            }
+          }
         }
-document.getElementById("attack-button").addEventListener('click', attack)
-
-
-
 
 function endGame(){
+    isWaiting = true
     // using the ternary operator to set condition (replacing If Condition)
     const endMessage = wizard.health === 0 && monster.health === 0 ?'no victors - all creatures are dead':
-    wizard.health > 0? 'The Wizard Wins':
-    'monster is Victorious' 
+     wizard.health > 0? 'The Wizard Wins':
+    'The monsters is Victorious' 
     const endEmoji = wizard.health > 0 ? "✌️" : "☠️"
-    document.body.innerHTML = `
+    
+    setTimeout(()=> document.body.innerHTML = `
     <div صنف="end-game"><h1> انتها الملب </h1>
     <h3>${endMessage}</h3>
     <p class="end-emoji">${endEmoji}</p>
-    </div>`
-
+    </div>`,2000) //delaying the display of endGame - setTimeout.
+    
 }
-
+document.getElementById("attack-button").addEventListener('click', attack)
 // صنف = class
 // انتها الملب = Game End
 

@@ -34,25 +34,25 @@ this.getHealthBarHtml = function (){
          }
 
 
-        this.diceArray = getDicePlaceHolderHtml(this.diceCount)
+        this.diceHtml = getDicePlaceHolderHtml(this.diceCount)
 
-        this.getDiceHtml = function (diceCount){
+        this.setDiceHtml = function (diceCount){
         this.currentDiceScore = getDiceRollArray(this.diceCount)
-        this.diceArray = this.currentDiceScore.map((num) => `<div class="dice">${num}</div>`
+        this.diceHtml = this.currentDiceScore.map((num) => `<div class="dice">${num}</div>`
         ).join('')
         }
               
          //the body of html as displayed in the game
      this.getCharacterHtml = function () {
         const healthBar = this.getHealthBarHtml()
-         const {elementId, name, avatar, health, diceCount} = this //this - object *making it reusable to different contexts
+         const {elementId, name, avatar, health, diceCount, diceHtml} = this //this - object *making it reusable to different contexts
                   return  `
              <div class="character-card">
              <h4 class="name"> ${name} </h4>
              <image class="avatar" src="${avatar}"/>
              <p class="health">health: <b> ${health} </b></p>
              ${healthBar}                   
-             <div class="dice-container">${this.diceArray}</div>
+             <div class="dice-container">${diceHtml}</div>
              </div>
              `
      } //making the dice roll empty display
@@ -63,3 +63,4 @@ this.getHealthBarHtml = function (){
 
 
       //let diceHtml = this.getDiceHtml(diceCount)
+      //get = returns something, set = update a function
