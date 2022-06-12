@@ -13,7 +13,7 @@ function getNewMonster(){
 
 //evocks the attack button
 function attack(){
-
+    
     if (!isWaiting){  
         wizard.setDiceHtml()
         monster.setDiceHtml()
@@ -49,15 +49,13 @@ function endGame(){
     const endEmoji = wizard.health > 0 ? "✌️" : "☠️"
     
     setTimeout(()=> document.body.innerHTML = `
-    <div صنف="end-game"><h1> انتها الملب </h1>
+    <div class="end-game"><h1> The game has ended!</h1>
     <h3>${endMessage}</h3>
     <p class="end-emoji">${endEmoji}</p>
     </div>`,2000) //delaying the display of endGame - setTimeout.
     
 }
 document.getElementById("attack-button").addEventListener('click', attack)
-// صنف = class
-// انتها الملب = Game End
 
 
 function render(){
@@ -68,3 +66,15 @@ const wizard = new Character(characterData.hero)
 let monster = getNewMonster() //to get all orc, demom, goblin
 
 render()
+
+function restart(){
+    if(wizard === dead || monster === dead){
+       attack()
+        
+    }
+}
+restart()
+
+// =========ISSUES==========
+// restart function not active
+//

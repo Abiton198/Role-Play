@@ -2,7 +2,7 @@
 html, body {
     padding: 0;
     margin: 0;    
-    background: rgb(51,43,55);
+    background: rgb(72, 77, 72);
     background: radial-gradient(circle, rgba(51,43,55,1) 0%, rgba(51,43,55,1) 100%);
     display: flex;
     flex-direction: column;
@@ -72,9 +72,10 @@ main {
     width: 15vh;
     border: 2px solid #000721;
     max-width:100%;
+    height: 40%;
     opacity: 0.8;
     border-radius: 10px;
-    background-color: rgba(0, 7, 33, 0.8);
+    background-color: rgba(187, 196, 228, 0.8);
 }
 
 @media(min-width:550px){
@@ -170,18 +171,17 @@ main {
 button {
     margin-top: .5rem;
     font-family: 'MedievalSharp', cursive;
-    background-color: #fcc02a;
-    border: 2px solid #963404;
-    outline: none;
-    padding-left:5vw;
-    padding-right:5vw;
-    text-align: center;
+    background-image: url(/Landing-Page/Role-Play-Game/images/dice.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 130px;
     text-decoration: none;
     display: inline-block;
     font-size: 1.5rem;
     border-radius: 6px;
     cursor: pointer;
-    color:#963404;
+    color:#381b0c;
     height:9vh;
     box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.4);
 }
