@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +10,21 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
+    <nav>
+        <h3>Blog Posts</h3>
+    </nav>   
+
+    <form id="blog-post">
+        <label for="blog-title">title:</label>
+        <input type="text" name="blog" id="blog-title">
+        <label for="blog-body">Body:</label>
+        <textarea id="blog-body"></textarea>
+        <button type="submit">Post</button>
+    </form>
     
-
-
+    
+    <div id="blog"></div>
 
 
     <script src="main.js"></script>
