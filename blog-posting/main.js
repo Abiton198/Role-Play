@@ -1,10 +1,10 @@
 
-/*making a function to render - DRY */
 let postsArray = []
 const titleInput = document.getElementById("blog-title") //input - title
 const bodyInput = document.getElementById("blog-title") // input - body
 const form = document.getElementById("blog-post") // form - title & body
 
+/*making a function to render - DRY */
 function renderPosts(){
             let html = ""
         for (let post of postsArray){ //function to display what has been returned as data
