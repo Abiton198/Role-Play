@@ -1,0 +1,29 @@
+#container {
+    background-color: blanchedalmond;
+    width: 70%;
+    height: 410px;
+}
+#seed-color {
+    width: 70%;
+    border: 2px solid green;
+    padding: 20px 80px;
+}
+button{
+    padding: 15px 10px;
+    margin-left: 10px;
+}
+
+.top-input {
+    display: flex;
+}
+#colors {
+    display: flex;
+}
+.color-type {
+    background-color: blue;
+    border: 2px solid red;
+    width: 110px;
+    height: 610px;
+    padding: 20px;
+    margin-top: 20px;
+}
