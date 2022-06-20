@@ -11,6 +11,10 @@
 button{
     padding: 15px 10px;
     margin-left: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: greenyellow;
 }
 
 .top-input {
@@ -18,7 +22,9 @@ button{
 }
 #colors {
     display: flex;
-}
+    flex-direction: row;
+    
+    }
 .color-type {
     background-color: blue;
     border: 2px solid red;
@@ -26,4 +32,12 @@ button{
     height: 610px;
     padding: 20px;
     margin-top: 20px;
+}
+
+#display1, #display2, #display3, #display4, #display5 {
+
+    border:  2px green ;
+    height: 340px;
+    width: 60px;
+    text-align: center;
 }

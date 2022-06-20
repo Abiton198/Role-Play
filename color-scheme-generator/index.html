@@ -13,7 +13,21 @@
 
 <div class="top-input">
 <input type="color" id="seed-color">
-<button id="choose-color">choose-color</button>
+ <select id="color-mode" name="select">           
+    <!---Define mode by which to generate the scheme from the seed color-->
+    <option value="monochrome" selected></option>
+    <option value="monochrome-dark"></option>
+    <option value="monochrome-light"></option>
+    <option value="analogic"></option>
+    <option value="complement"></option>
+    <option value="analogic-complement"></option>
+    <option value="monochrome-dark"></option>
+    <option value="triad"></option>
+    <option value="quad"></option>
+</select>
+<button id="choose-color" class="scheme-btn">choose-color</button>
+
+<div class="copy"> <p class="info-copy">Click the code to copy</p></div>
 </div>
 
 <div id="colors"></div>
