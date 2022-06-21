@@ -3,12 +3,12 @@ let colorArray = []
 function renderColors(){
 let colorHex = document.getElementById("color-hex").value.slice(1) //input field
 let colorMode = document.getElementById("color-mode").value //selector
-//document.getElementById("copy-info").textContent = "Click the code to copy "
+
 document.getElementById("title").style.color = `#${colorHex}` //to change title color accordingly 
 
 fetch(`https://www.thecolorapi.com/scheme?hex=${colorHex}&mode=${colorMode}&count=5`, {})
 .then(response => response.json())
-.then(data =>  {
+.then(data =>  { // to get data from json() to the array
     for (let i=0; i < data.colors.length; i++){
         colorArray.push(data.colors[i].hex.value)
     }
@@ -38,3 +38,7 @@ document.getElementById("color-schemes").innerHTML = myColors.join('') //renderi
         renderColors()
     })
    
+function copyToClipBoard(){
+    document.getElementById("info-copy").textContent = "Click the code to copy "
+
+}
