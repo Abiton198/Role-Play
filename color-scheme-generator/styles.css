@@ -1,43 +1,45 @@
 #container {
-    background-color: blanchedalmond;
-    width: 70%;
-    height: 410px;
-}
-#seed-color {
-    width: 70%;
-    border: 2px solid green;
-    padding: 20px 80px;
-}
-button{
-    padding: 15px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-button:hover{
-    background-color: greenyellow;
+    
+    width: 500px;
+    margin: 0 auto;
 }
 
-.top-input {
-    display: flex;
+h1{
+    text-align: center;
 }
-#colors {
+#get-color, #color-mode{
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: #3a4a5a;
+    color: white;
+}
+
+#color-schemes {
+    border: red solid ;
     display: flex;
     flex-direction: row;
-    
-    }
-.color-type {
-    background-color: blue;
-    border: 2px solid red;
-    width: 110px;
-    height: 610px;
-    padding: 20px;
-    margin-top: 20px;
 }
 
-#display1, #display2, #display3, #display4, #display5 {
-
-    border:  2px green ;
-    height: 340px;
-    width: 60px;
+.info{
+    background: #d3c993;
     text-align: center;
+    font-size: 1.1em;
+    padding: 0.8em 0;
+    margin-bottom: 2em;
+    margin-top: 20px;
+}
+.cod-color{
+    border: none;
+    text-align: center;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.colors {
+    width: 40px;
+    height: 200px;
+    margin: 0;
+    border: solid green;
 }

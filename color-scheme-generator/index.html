@@ -8,29 +8,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1 id="title"> Scheme Colors</h1>
 <div id="container">
 
-<div class="top-input">
-<input type="color" id="seed-color">
+
+    <form id="colors-form">
+<input type="color" id="color-hex">
  <select id="color-mode" name="select">           
     <!---Define mode by which to generate the scheme from the seed color-->
-    <option value="monochrome" selected></option>
-    <option value="monochrome-dark"></option>
-    <option value="monochrome-light"></option>
-    <option value="analogic"></option>
-    <option value="complement"></option>
-    <option value="analogic-complement"></option>
-    <option value="monochrome-dark"></option>
-    <option value="triad"></option>
-    <option value="quad"></option>
+    <option value="monochrome" selected>monochrome</option>
+    <option value="monochrome-dark">monochrome-dark</option>
+    <option value="monochrome-light">monochrome-light</option>
+    <option value="analogic">analogic</option>
+    <option value="complement">complement</option>
+    <option value="analogic-complement">analogic-complement</option>
+    <option value="monochrome-dark">monochrome-dark</option>
+    <option value="triad">triad</option>
+    <option value="quad">quad</option>
 </select>
-<button id="choose-color" class="scheme-btn">choose-color</button>
+<button id="get-color" class="scheme-btn" type="submit">get color scheme</button>
+</form>
 
-<div class="copy"> <p class="info-copy">Click the code to copy</p></div>
-</div>
+<div class="info"> <p id="info-copy">Click the code to copy</p></div>
 
-<div id="colors"></div>
+
+<div id="color-schemes"></div>
 
 
 
