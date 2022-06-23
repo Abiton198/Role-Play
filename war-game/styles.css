@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/Landing-Page/war-game/img/pooltable.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;  /* seperate the two buttons top&botttom */
+}
+
+#new-deck, #new-card {
+    background-color: yellow;
+    padding: 5px;
+    width: 25%;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+#new-card {    
+    width: 100%;
+    }
+
+    .card-position{
+        border: solid 2px;
+        width: calc(120px * 5/7);
+        height: 120px;
+        margin: 10px;
+        border-radius: 5px;
+
+    }
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+}
