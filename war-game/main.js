@@ -27,7 +27,7 @@ function handleClick(){
      `
     //  displaying the winner messsage on html
     const winnerText = determineCardWinner(data.cards[0], data.cards[1])
-        header.innerHTML = winnerText
+     header.innerHTML = winnerText
        
         }))
     }
