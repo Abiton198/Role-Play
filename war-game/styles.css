@@ -4,6 +4,7 @@ body {
     background-image: url(/Landing-Page/war-game/img/pooltable.jpg);
     background-position: center;
     background-size: cover;
+    color: white;
 }
 
 .container{
@@ -21,17 +22,28 @@ body {
     font-weight: 900;
     cursor: pointer;
 }
+
+/* draw button */
 #new-card {    
     width: 100%;
     }
+    #new-card:disabled {
+        cursor: not-allowed;
+    }
 
+    /* card slots with black border */
     .card-position{
-        border: solid 2px;
+        border: solid 2px black;
         width: calc(120px * 5/7);
         height: 120px;
         margin: 10px;
         border-radius: 5px;
 
+    }
+
+    .cards-order {
+        display: flex;
+        margin: 5px;
     }
 
 #cards {
@@ -49,3 +61,15 @@ body {
 #header {
     text-align: center;
 }
+
+.display {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    
+}
+
+p{
+    font-weight: normal;
+}
+
