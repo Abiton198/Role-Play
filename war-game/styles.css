@@ -73,3 +73,16 @@ p{
     font-weight: normal;
 }
 
+/* scores counts */
+#computer-score, #my-score {
+    text-align: center;
+    color: rgb(221, 230, 241);
+    font-weight: 900;
+    font-size: 18px;
+    }
+#computer-score {
+    margin-bottom: 0;
+}
+#my-score {
+    margin-top: 0;
+}
