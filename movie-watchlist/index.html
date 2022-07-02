@@ -6,43 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie-Watchlist</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <form class="form">
     
+    <div class="container">
+<header>
     <div class="search-button">
         <div class="header">
-            <h2 id="find-film">Find your film <a href="##" class="watchlist-link">Watch-list</a></h2>
+            <h2 id="find-film">Find your film <a href="index-link.html" class="watchlist-link">Watch-list</a></h2>
             
         </div>
-    
-        <input type="search" placeholder="search movie with no data">
-        <button type="submit" id="search-btn"><i class="search">search</i> </button>
     </div>
-        <div id="botton-space"></div>
+</header>
 
-
+    <form class="search-field">
+        <label aria-label="Search for a movie" class="hide">Search movie with no data</label>
+        <input type="text" for="submit" placeholder="search movie with no data" name="search" id="search-input">
+        <button type="submit" id="search-btn"><i class="icon">search</i> </button>
     </form>
 
+        <div id="movies-list" class="container">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>  
+</div>
 
 
     <script src="main.js"></script>
 </body>
 </html>
+
+
+<!-- action="action_page.html" -->
