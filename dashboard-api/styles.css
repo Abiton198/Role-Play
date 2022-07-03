@@ -1,0 +1,16 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTY4NjA0NDk&ixlib=rb-1.2.1&q=80" */
