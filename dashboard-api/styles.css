@@ -1,16 +1,34 @@
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
+/* to make the body fixed as a static page */
+*{
+    box-sizing: border-box; 
+} 
 
 body {
+    margin: 0;
+    padding: 0;
+     color:white;
+     font-size: 18px;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+/* top text */
+.curr-weath{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.time {
+    text-align: center;
+}
+main {
+    padding: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-/* "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTY4NjA0NDk&ixlib=rb-1.2.1&q=80" */
