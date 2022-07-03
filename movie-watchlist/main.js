@@ -10,8 +10,14 @@ const movieKey = document.getElementsByClassName('movie-key')
 const localStorageKeys = Object.keys(localStorage)
 
 if(searchBtn){
-   searchBtn.addEventListener("click", searchMovies)
+   searchBtn.addEventListener("click", searchMovies) //search button
 }
+/*
+function searchMovies(){}
+fetch(`https://www.omdbapi.com/?s=${searchInput.value}&apikey=a5394d01`) 
+.then(res => res.json())
+.then(data => console.log(data))
+*/
 
 /* Hide default elements*/
 async function searchMovies(){
@@ -21,10 +27,10 @@ async function searchMovies(){
       childrenArr.forEach((child) => child.remove()) 
    }
 
-let response = await fetch(`https://www.omdbapi.com/?s=${searchInput.value.trim()}&apikey=a5394d01`)
+let response = await fetch(`https://www.omdbapi.com/?s=${searchInput.value.trim()}&apikey=a5394d01`) //method removes whitespace from both sides of a string
 let data = await response.json() 
 
-const movies = data.Search 
+const movies = data.Search   
 
 // displaying the results
 

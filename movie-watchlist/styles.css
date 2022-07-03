@@ -7,6 +7,7 @@ body, html {
   border: solid rgb(15, 15, 15) 1px; 
     width: 550px;
     height: 780px;
+    background-color: green;
 }
 
 .header {
@@ -70,4 +71,5 @@ h2 a {
   .hide {
     display: none;
   }
+  
 /* watchlist */
