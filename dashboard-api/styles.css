@@ -32,3 +32,13 @@ main {
     justify-content: space-between;
 }
 
+#crypto-top{
+    display: flex;
+    flex-direction: row;
+}
+
+#prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
