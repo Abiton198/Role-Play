@@ -14,17 +14,13 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-/* top text */
+/* currency display */
 .curr-weath{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#time {
-    text-align: center;
-    font-size: 41px;
-}
 main {
     padding: 15px;
     height: 100vh;
@@ -42,4 +38,33 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+/* time */
+#time {
+    text-align: center;
+    font-size: 41px;
+}
+
+/* temperature display */
+#weather {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-right: 25px;
+}
+
+.weather-city{
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.weather-temp{
+    margin: 0;
+    font-size: 1.7rem;
+    margin-left: -10px;
 }
