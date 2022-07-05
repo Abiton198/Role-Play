@@ -21,8 +21,9 @@ body {
     justify-content: space-between;
 }
 
-.time {
+#time {
     text-align: center;
+    font-size: 41px;
 }
 main {
     padding: 15px;

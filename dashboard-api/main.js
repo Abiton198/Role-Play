@@ -1,10 +1,12 @@
+
+let keyWeather = '6ddd3954f3eca243f3bc57cd214fe38c' 
+
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
 .then(res => res.json())
 .then(data =>{
     document.body.style.backgroundImage = `url(${data.urls.full})`
     document.getElementById("author").innerHTML = `By: ${data.user.name}`
-    throw Error
-})
+   })
 // use the default background image when error occurs
 .catch( err => {
  document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&
@@ -13,16 +15,53 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     document.getElementById("author").textContent = `By: Dodi Achmad`
 }) 
 
+/*Displaying Crypto currency of choice on live updates */
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
-.then(res =>res.json())
+.then(res =>res => res.json())
+    
 .then(data => {
 
-    document.getElementById("crypto-top").innerHTML = `
-     <img src=${data.image.small}/> <br> ${data.name} `
-     document.getElementById("currency").innerHTML = `<p>  Current-Price: ${data.market_data.current_price.usd} </p>
-     <p> High-Price: ${data.market_data.high_24h.usd} </p> <p> Low-Price: ${data.market_data.low_24h.usd} </p>`
-    console.log(data)})
+    document.getElementById("crypto-top").innerHTML = ` 
+     <img src= ${data.image.small} /> <br> ${data.name} ` //displaying logo & name
+
+     document.getElementById("currency").innerHTML = `<p>  Current-Price: $ ${data.market_data.current_price.usd} </p>
+     <p> High-Price: $ ${data.market_data.high_24h.usd} </p> <p> Low-Price: $ ${data.market_data.low_24h.usd} </p>`
+    console.log(data)}) 
     .catch(err => console.log(err))
+
+/*showing current live-time on page */
+    function getCurrentTime(){      
+        const date = new Date()
+        document.getElementById("time").innerHTML = date.toLocaleTimeString("en-us", {timeStyle: "long"})
+    }
+    setTimeout(getCurrentTime, 1000) //setTimeout or setInterval
+   
+/*displaying current-weather */
+//getting geo-position using API
+
+  
+//getting Geo-position using method */
+navigator.geolocation.getCurrentPosition( position => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${keyWeather}`)
+    .then(res => {
+        if (!res.ok){
+         throw Error ('weather data not available!')}
+        return res.json()})
+    .then(data => {
+        console.log(data)
+        const urlImage = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        document.getElementById("weather").innerHTML =
+        `<img src= ${urlImage} />
+        <p>${Math.round(data.main.temp)} ْ</p>
+        <p>${data.name}</p>
+       `
+        
+       })
+    
+    .catch(err => console.log(err))
+})
+
+   
 
 
 
