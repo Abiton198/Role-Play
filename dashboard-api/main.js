@@ -1,6 +1,7 @@
 
 let keyWeather = '6ddd3954f3eca243f3bc57cd214fe38c' 
 
+/*BACKGROUND pictures */
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
 .then(res => res.json())
 .then(data =>{
@@ -32,7 +33,7 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 /*showing current live-time on page */
     function getCurrentTime(){      
         const date = new Date()
-        document.getElementById("time").innerHTML = date.toLocaleTimeString("en-us", {timeStyle: "long"})
+        document.getElementById("time").innerHTML = date.toLocaleTimeString("en-us", {timeStyle: "short"})
     }
     setTimeout(getCurrentTime, 1000) //setTimeout or setInterval
    
@@ -45,7 +46,7 @@ navigator.geolocation.getCurrentPosition( position => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${keyWeather}`)
     .then(res => {
         if (!res.ok){
-         throw Error ('weather data not available!')}
+         throw Error ('weather data not available!')} //manually throwing error
         return res.json()})
     .then(data => {
         console.log(data)
@@ -61,7 +62,17 @@ navigator.geolocation.getCurrentPosition( position => {
     .catch(err => console.log(err))
 })
 
-   
+/**MOTIVATIONAL QUOTES */
+let quotes = []
+
+fetch("https://type.fit/api/quotes?text&name")
+.then(res => res.json())
+.then(data => {console.log(data.splice(0, 50))
+    
+    for (i = 0; i < data.length; i++){
+document.getElementById("motivation").innerHTML = `${data[0].text} <br> (${data[0].author})`
+
+}})
 
 
 
