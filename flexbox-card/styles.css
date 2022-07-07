@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    
+}
+.image {
+    top: 102px;
+    left: 421px;
+    width: 255px;
+    height: 391px;
+}
+
+.tips-heading {
+    color: #05CBE9;
+    font-size: 36px;
+    margin: 15px;
+}
+
+.tips-message {
+    margin: 15px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: #111D4A;
+    color: #FFFFFF;
+    font-size: 16px;
+    align-items: flex-start;
+    border: yellow 2px solid;    
+    
+}
+
+.read{
+    margin: 15px;
+}
+button{
+    background-color: #05CBE9;
+    height: 44px;
+    font-weight: 900;
+}
+
+.bottom {
+    align-items:flex-start;
+    display:flex;
+    border: 2px solid red;
+    margin-top: auto; 
+    align-content: space-between;
+}
+
