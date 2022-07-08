@@ -1,12 +1,31 @@
+/* aligning card to centre */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(61, 126, 122);
+    border: 5px solid white;
+}
+
+/* mobile view */
 .container{
     display: flex;
-    
+    flex-direction: column;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
 }
+
+
+/* flex-basis = allows change of height to width and vice versa in media query
+- set height/width = 0 to avoid over stretch of image when used as flex. */
 .image {
-    top: 102px;
-    left: 421px;
-    width: 255px;
-    height: 391px;
+   object-fit: cover;
+   flex-basis: 200px;
+    min-width: 0;
+    min-height: 0;
 }
 
 .tips-heading {
@@ -18,31 +37,70 @@
 .tips-message {
     margin: 15px;
 }
-.main{
-    display: flex;
-    flex-direction: column;
-    background-color: #111D4A;
+.main{  
+   background-color: #111D4A;
     color: #FFFFFF;
     font-size: 16px;
-    align-items: flex-start;
-    border: yellow 2px solid;    
+      
+}
+
+/* opacity = making text light in view */
+.read{
+    margin:  0 15px;
+    opacity: .6;
+    font-size: 18px;
+    line-height: 1;
     
 }
 
-.read{
-    margin: 15px;
-}
-button{
-    background-color: #05CBE9;
-    height: 44px;
-    font-weight: 900;
-}
-
+/* jc = seperate items apart
+f-e = brings items to the bottom */
 .bottom {
-    align-items:flex-start;
+   
     display:flex;
-    border: 2px solid red;
-    margin-top: auto; 
-    align-content: space-between;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-top: 3em;
 }
 
+.card-btn{    
+    background-color: #05CBE9;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: .35em 1em;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+
+span {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* on Large screen */
+
+@media (min-width: 600px){
+
+    .container {
+        flex-direction: row;
+    }
+
+    .image{
+        height: 300px;
+    }
+
+    .main{
+        flex-direction: column;
+        display: flex;
+    }
+
+    .bottom{
+        margin-top: auto;
+    }
+
+    .tips-message {
+        max-width: 500px;
+    }
+}
