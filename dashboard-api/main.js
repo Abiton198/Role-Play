@@ -42,6 +42,7 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 
   
 //getting Geo-position using method */
+
 navigator.geolocation.getCurrentPosition( position => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${keyWeather}`)
     .then(res => {
@@ -74,7 +75,11 @@ document.getElementById("motivation").innerHTML = `${data[0].text} <br> (${data[
 
 }})
 
-
+fetch(`http://api.aladhan.com/v1/hijriCalendar?longitude=25.5754&latitude=-33.9313&method=2&month=7&year=2022`)
+.then(res => res.json())
+.then(data => {
+    console.log(data)
+document.getElementById("prayer-times").innerHTML = data.timings})
 
 
 
