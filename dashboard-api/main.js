@@ -16,14 +16,14 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     document.getElementById("author").textContent = `By: Dodi Achmad`
 }) 
 
-/*Displaying Crypto currency of choice on live updates */
-fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
+/*Displaying Crypto currency of choice on live updates  dogecoin */
+fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
 .then(res => res.json())
     
 .then(data => {
     console.log(data)
     document.getElementById("crypto-top").innerHTML = ` 
-     <img src= ${data.image.small} /> <br> ${data.name} ` //displaying logo & name
+     <img src= ${data.image.small} /> <br> ${data.market_data.name} ` //displaying logo & name
 
      document.getElementById("currency").innerHTML = `<p>  Current-Price: $ ${data.market_data.current_price.usd} </p>
      <p> High-Price: $ ${data.market_data.high_24h.usd} </p> <p> Low-Price: $ ${data.market_data.low_24h.usd} </p>`
@@ -75,11 +75,34 @@ document.getElementById("motivation").innerHTML = `${data[0].text} <br> (${data[
 
 }})
 
-fetch(`http://api.aladhan.com/v1/hijriCalendar?longitude=25.5754&latitude=-33.9313&method=2&month=7&year=2022`)
+fetch(`http://api.aladhan.com/v1/hijriCalendarByAddress?address=Port-Elizabeth,%20SouthAfrica&method=4&month=04&year=1443`)
 .then(res => res.json())
 .then(data => {
     console.log(data)
-document.getElementById("prayer-times").innerHTML = data.timings})
+document.getElementById("prayer-times").innerHTML = `<p> ${data.data.date} </p>   <p> ${data.data.timings} </p>`})
+
+
+ 
+/**{code: 200, status: 'OK', data: Array(30)}
+code: 200
+data: Array(30)
+0:
+date: {readable: '07 Nov 2583', timestamp: '19371250861', gregorian: {…}, hijri: {…}}
+meta: {latitude: -33.9313, longitude: 25.5754, timezone: 'Africa/Johannesburg', method: {…}, latitudeAdjustmentMethod: 'ANGLE_BASED', …}
+timings: {Fajr: '03:55 (SAST)', Sunrise: '05:11 (SAST)', Dhuhr: '12:01 (SAST)', Asr: '15:44 (SAST)', Sunset: '18:51 (SAST)', …}
+[[Prototype]]: Object
+1:
+date: {readable: '08 Nov 2583', timestamp: '19371337261', gregorian: {…}, hijri: {…}}
+meta: {latitude: -33.9313, longitude: 25.5754, timezone: 'Africa/Johannesburg', method: {…}, latitudeAdjustmentMethod: 'ANGLE_BASED', …}
+timings: {Fajr: '03:54 (SAST)', Sunrise: '05:11 (SAST)', Dhuhr: '12:01 (SAST)', Asr: '15:44 (SAST)', Sunset: '18:52 (SAST)', …}
+ 
+http://api.aladhan.com/v1/hijriCalendarByAddress?address=Port-Elizabeth,%20SouthAfrica&method=2&month=04&year=1437
+
+{timings: {…}, date: {…}, meta: {…}}
+date: {readable: '07 Nov 2583', timestamp: '19371250861', gregorian: {…}, hijri: {…}}
+meta: {latitude: -33.9313, longitude: 25.5754, timezone: 'Africa/Johannesburg', method: {…}, latitudeAdjustmentMethod: 'ANGLE_BASED', …}
+timings: {Fajr: '03:55 (SAST)', Sunrise: '05:11 (SAST)', Dhuhr: '12:01 (SAST)', Asr: '15:44 (SAST)', Sunset: '18:51 (SAST)', …}
+[[Prototype]]: Object*/
 
 
 

@@ -74,3 +74,10 @@ main {
 #motivation{
     text-align: center;
 }
+
+/* bottom text */
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
