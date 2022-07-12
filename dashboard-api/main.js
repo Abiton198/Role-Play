@@ -92,6 +92,19 @@ prayerTimes.innerHTML = `<p> ${data.data.date} </p>   <p> ${data.data.timings} <
 
 
 
+/* =======ISSUES========
+
+1. logo not displaying and name
+2. current weather not displaying correct temperatures
+3. motivational quotes not changing
+4. data on prayer times not displaying 
+*/
+
+
+
+
+
+
 /*
 # Resolved promises quiz
 
