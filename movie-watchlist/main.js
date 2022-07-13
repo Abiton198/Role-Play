@@ -8,6 +8,7 @@ const readMore = document.getElementsByClassName('read-more')
 const readMorePlot = document.getElementsByClassName('read-more-plot')
 const movieKey = document.getElementsByClassName('movie-key')
 const localStorageKeys = Object.keys(localStorage)
+let keysAPI = 'a5394d01'
 
 if(searchBtn){
    searchBtn.addEventListener("click", searchMovies) //search button
@@ -27,7 +28,7 @@ async function searchMovies(){
       childrenArr.forEach((child) => child.remove()) 
    }
 
-let response = await fetch(`https://www.omdbapi.com/?s=${searchInput.value.trim()}&apikey=a5394d01`) //method removes whitespace from both sides of a string
+let response = await fetch(`https://www.omdbapi.com/?s=${searchInput.value.trim()}&apikey=${keysAPI}`) //.trim()=== method removes whitespace from both sides of a string
 let data = await response.json() 
 
 const movies = data.Search   
@@ -35,10 +36,8 @@ const movies = data.Search
 // displaying the results
 
 movies.forEach(async (movie) =>{
-let response = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=a5394d01`)
+let response = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${keysAPI}`)
 let moviesListData = await response.json()
-
-
 
 const readMoreMovieID = moviesListData.imdbID + 'more'
 const hideReadMore = moviesListData.imdbID + 'hide'
@@ -112,7 +111,6 @@ function addToWatchlist(movieIDkey, movieID, watchlistBtnKey, removeBtnKey) {
 function removeFromWatchlist(movieIDkey, removeBtnKey, watchlistBtnKey, removeBtnKey) {
    localStorage.removeItem(movieIDkey.innerHTML)
 
-
  // Get parent element (the movie card div) and remove it
  if (watchlist) {
    localStorage.removeItem(movieIDkey.innerHTML)
@@ -120,7 +118,6 @@ function removeFromWatchlist(movieIDkey, removeBtnKey, watchlistBtnKey, removeBt
    const parentEl = document.getElementById(movieIDkey.innerHTML).parentElement
    parentEl.remove()
 }
-
 watchlistBtnKey.style.display = 'inline'
 removeBtnKey.style.display = 'none'
 }
@@ -133,7 +130,6 @@ removeBtnKey.style.display = 'none'
           childrenArr.forEach((child) => (child.style.display = 'flex'))
       }
   }
-
 
 // Hide default elements if data is in local storage
 if (watchlist && localStorage.length > 0) {
@@ -162,7 +158,5 @@ for (let i = 0; i < localStorage.length; i++) {
       }
   }
 }
-
-
- //  http://www.omdbapi.com/?i=tt3896198&apikey=a5394d01
+ //  http://www.omdbapi.com/?i=tt3896198&apikey=a5394d01 - API fetched
 

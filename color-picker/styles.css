@@ -1,8 +1,21 @@
-body,html{
+
+html, body {
     margin: 0;
     padding: 0;
+    background-color: blanchedalmond;
 }
 
-body{
-    background: red;
+* {
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+
+.my-colors {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.my-color {
+    height: 20%;
+    width: 20%;
 }
