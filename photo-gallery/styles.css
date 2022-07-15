@@ -9,14 +9,33 @@ html, body {
     font-family: "Lucida Console", Monaco, monospace; 
 }
 
-.my-photos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-     
-}
 img{
     border: solid white 0.1rem;
     border-radius: 0.7rem;
    margin: 1rem;
 }
+
+.my-gallery{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border: red solid;
+}
+
+.my-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my-photo {
+    border: 0.1rem solid white;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
+}
+
+/* ========NOTES======
+
+1. display-flex = making contents of a container flex elements
+2. flex-direction = makes flex items row / column*/
