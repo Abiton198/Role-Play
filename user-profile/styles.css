@@ -14,6 +14,9 @@ body{
 
 .card-one {
     border: solid green 10px;
+    margin-left: auto;
+    width: 50%;
+    height: fit-content;
 }
 .user-profile-header {
     background-color:aquamarine;
@@ -61,10 +64,49 @@ body{
 
 .card-two {
     border: solid 10px;
+    width: 50%;
+    height: fit-content;
+    background-color: antiquewhite;
+}
+.user-profile-header-two {
+    background-color:rgb(255, 232, 127);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-direction: row;
+}
+
+.profile-company-two {
+    border:solid 1px;
+    background-color: rgb(204, 193, 32);
+    padding: 20px;    
+    text-align: center;
+}
+
+.contact-details-two {
+    padding: 20px;
+    background-color: rgb(73, 131, 26);
+}
+
+.address-two {
+    font-weight: 300;
+    font-size: 16px;
+    background-color: rgb(231, 224, 128);
+    padding: 3px;
+}
+
+.phone-two {
+    margin-left: 35px;
+}
+.website-two{
+    margin-left: 70px;
 }
 
 /* =======CARD THREE====== */
 
 .card-three {
     border: solid 10px yellow;
+    width: 50%;
+    height: fit-content;
+    margin-left: auto;
 }

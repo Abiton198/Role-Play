@@ -38,24 +38,24 @@ userProfile().then( user => {
 </div>
 
 <div class="card-two">
-    <div class="user-profile-header">
-        <div class="username"> @${user[3].username}</div>
-        <div class="name">${user[3].name}</div>
+    <div class="user-profile-header-two">
+        <div class="username-two"> @${user[3].username}</div>
+        <div class="name-two">👦🏽${user[3].name}</div>
     </div>
     
-    <div class="profile-company">
-        <div class="company-name">${user[3].company.name}</div>
-        <div class="username">${user[3].company.catchPhrase}</div>
-        <div class="username">${user[3].company.bs}</div>
+    <div class="profile-company-two">
+        <div class="company-name-two">${user[3].company.name}</div>
+        <div class="username-two">${user[3].company.catchPhrase}</div>
+        <div class="username-two">${user[3].company.bs}</div>
     </div>
     
-    <div class="contact-details">
-    <div class="email">📧 ${user[3].email}</div>
-    <div class="phone">📞 ${user[3].phone}</div>
-    <div class="website">💻 ${user[3].website}</div>
+    <div class="contact-details-two">
+    <div class="email-two">📧 ${user[3].email}</div>
+    <div class="phone-two">📞 ${user[3].phone}</div>
+    <div class="website-two">💻 ${user[3].website}</div>
     </div>
     
-    <div class="address">
+    <div class="address-two">
     ${user[3].address.street}, ${user[3].address.suite}, 
     ${user[3].address.city}, ${user[3].address.zipcode} 
     </div>
