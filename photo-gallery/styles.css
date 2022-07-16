@@ -20,7 +20,6 @@ img{
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    border: red solid;
 }
 
 .my-photos {
@@ -35,7 +34,12 @@ img{
     margin: 0.5rem;
 }
 
+#my-selected-photo {
+    display: none;
+}
+
 /* ========NOTES======
 
 1. display-flex = making contents of a container flex elements
-2. flex-direction = makes flex items row / column*/
+2. flex-direction = makes flex items row / column
+3. flex-wrap = making elements move down when they reach width size of container*/

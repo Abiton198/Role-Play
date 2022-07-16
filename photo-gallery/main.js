@@ -19,20 +19,20 @@ function getMyPhotosHtml(photos){
 getPhotos().then(photos => {
     let myPhotosHtml = getMyPhotosHtml(photos)
     document.body.innerHTML = `<div class="my-gallery"> 
-            <img id="my-selected-photo" style="display: none;" class="my-photo" 
-            src="https://picsum.photos/id/1/200/200"/>
+            <img id="my-selected-photo"  class="my-photo" 
+            src="https://picsum.photos/id/2/200/200"/>
             ${myPhotosHtml}
             </div>`
 
-    document.body.innerHTML = getMyPhotosHtml(photos)
-
     let myPhotoImgs = Array.from(document.getElementsByClassName("my-photo"))
+    
     myPhotoImgs.forEach(photoImg => {
-        photoImg.addEventListener("click", e =>{
+        photoImg.addEventListener("click", e => { 
+            console.log(e)  
             let selectedPhotoSrc = photoImg.src.substr(0, photoImg.src.length - 7) + `/200/200` //substr() = takes 2 par to determine the length of a string(letters)
             let selectedPhoto = document.getElementById("my-selected-photo")
             selectedPhoto.src = selectedPhotoSrc
             selectedPhoto.style.display = "inline"
+     })
     })
-})
 })
