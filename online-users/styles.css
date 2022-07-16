@@ -1,27 +1,65 @@
 body{
-    margin: 20px;
-    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
+/* overflow = to show a scroll-bar on display */
+.my-online-users {
+    max-height: 70%;
+    max-width: 250px;
+    overflow: auto;
+} 
+/* <div> with both green dot and username */
 .my-online-user {
-   border: solid rgb(7, 7, 7) 1px;
-   font-size: 1.5rem;
-   width: 60%;
-   display: flex;
-   flex-direction: row-reverse;
-   padding: 5px;
-   background-color: lightgreen;
-   border-radius: 5px;
+    background-color: lightgreen;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid black;
+    font-size: 1.4rem;
 }
+
+/* the round green-dot */
 .user-online{
     background-color: rgb(11, 114, 11);
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 50%;  
+    margin-right: 15px; 
+    margin-left: 0.1rem; 
+    order: 0;
+}
+
+/* username online */
+.user-username{
+    margin-right: 20px;
     margin-right: auto;
 }
 
-.user-username{
-    margin-right: 20px;
+/* order of users as given on data==descending order */
+.user-username {
+    order: 1;
+}
+.main{
+    margin-top: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.header,.footer{
+   
+    background-color: rgb(209, 132, 132);
+    width: 100%;
+    padding: 20px;
+    height: 10%;
+    font-size: 20px;
+    font-weight: 700;
+}
+.main {
+    background-color:springgreen;
+    flex: auto;
+
 }
 

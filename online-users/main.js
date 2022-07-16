@@ -25,6 +25,10 @@ getUsers().then(users =>{
     let sampleUser = users[4]
     let userDiv = getUserDiv(sampleUser)
 
-    document.body.innerHTML = `<div class="my-online-users">
-    ${users.map(user => getUserDiv(user)).join('')} </div>` //map() = returns items in an array
+    document.body.innerHTML = `
+    <div class="header">Header</div>
+    <div class="my-online-users">
+    ${users.map(user => getUserDiv(user)).join('')} </div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>` //map() = returns items in an array
 })//.join('') = to join <div>s in display 
