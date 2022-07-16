@@ -14,19 +14,23 @@ userProfile().then( user => {
     
     document.body.innerHTML = `
     <div class="user-profile-header">
-        <div class="username"> ${user.username}</div>
+        <div class="username"> @${user.username}</div>
         <div class="name">${user.name}</div>
     </div>
     
     <div class="profile-company">
         <div class="company-name">${user.company.name}</div>
         <div class="username">${user.company.catchPhrase}</div>
-        <div class="username">${user.website}</div>
+        <div class="username">${user.company.bs}</div>
     </div>
     
     <div class="contact-details">
-    <div class="email">${user.email}</div>
+    <div class="email">📧 ${user.email}</div>
+    <div class="phone">📞 ${user.phone}</div>
+    <div class="website">💻 ${user.website}</div>
+    </div>
+    
     <div class="address">
-    ${user.address.street} ${user.address.suite} ${user.address.city} </div>`
+    ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode} </div>`
 
 })

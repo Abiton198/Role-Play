@@ -1,5 +1,52 @@
+
+* {
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+
 body{
     background-color: lightblue;
     display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.user-profile-header {
+    background-color:aquamarine;
+    display: flex;
     justify-content: space-between;
+    padding: 10px 0;
+    flex-direction: row-reverse;
+   
+    margin: 20px 0;
+}
+
+.profile-company {
+    border:solid 1px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 5px;
+    text-align: center;
+}
+
+.contact-details {
+    border:solid 1px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0; 
+    background-color: lightgreen;
+}
+
+.address {
+    font-weight: 300;
+    font-size: 20px;
+    background-color: aquamarine;
+    padding: 3px;
+    margin-top: 30px;
+}
+
+.phone {
+    margin-left: 35px;
+}
+.website{
+    margin-left: 70px;
 }
