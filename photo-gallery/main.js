@@ -36,3 +36,4 @@ getPhotos().then(photos => {
      })
     })
 })
+
