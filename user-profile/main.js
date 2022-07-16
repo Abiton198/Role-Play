@@ -10,10 +10,23 @@ async function userProfile(){
     return user
 }
 
-userProfile().then(username =>{
-    let username = user
-
+userProfile().then( user => {
+    
     document.body.innerHTML = `
-    <div>${username}</div>`
+    <div class="user-profile-header">
+        <div class="username"> ${user.username}</div>
+        <div class="name">${user.name}</div>
+    </div>
+    
+    <div class="profile-company">
+        <div class="company-name">${user.company.name}</div>
+        <div class="username">${user.company.catchPhrase}</div>
+        <div class="username">${user.website}</div>
+    </div>
+    
+    <div class="contact-details">
+    <div class="email">${user.email}</div>
+    <div class="address">
+    ${user.address.street} ${user.address.suite} ${user.address.city} </div>`
 
 })
