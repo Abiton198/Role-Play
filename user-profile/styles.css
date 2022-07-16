@@ -9,6 +9,12 @@ body{
     flex-direction: column;
     margin: 0;
 }
+
+/* ====CARD ONE=== */
+
+.card-one {
+    border: solid green 10px;
+}
 .user-profile-header {
     background-color:aquamarine;
     display: flex;
@@ -16,12 +22,12 @@ body{
     padding: 10px 0;
     flex-direction: row-reverse;
    
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .profile-company {
     border:solid 1px;
-    background-color: aliceblue;
+    background-color: rgb(168, 181, 192);
     padding: 20px;
     border-radius: 15px;
     margin: 20px 5px;
@@ -49,4 +55,16 @@ body{
 }
 .website{
     margin-left: 70px;
+}
+
+/* =======CARD TWO====== */
+
+.card-two {
+    border: solid 10px;
+}
+
+/* =======CARD THREE====== */
+
+.card-three {
+    border: solid 10px yellow;
 }
