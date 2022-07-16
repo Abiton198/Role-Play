@@ -25,7 +25,7 @@ getPhotos().then(photos => {
             </div>`
 
     let myPhotoImgs = Array.from(document.getElementsByClassName("my-photo"))
-    
+    //function to enable selected photo to display large when clicked
     myPhotoImgs.forEach(photoImg => {
         photoImg.addEventListener("click", e => { 
             console.log(e)  
