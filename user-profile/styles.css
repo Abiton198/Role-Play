@@ -13,7 +13,7 @@ body{
 /* ====CARD ONE=== */
 
 .card-one {
-    border: solid green 10px;
+    border: solid green 1px;
     margin-left: auto;
     width: 50%;
     height: fit-content;
@@ -63,7 +63,7 @@ body{
 /* =======CARD TWO====== */
 
 .card-two {
-    border: solid 10px;
+    /* border: solid 10px; */
     width: 50%;
     height: fit-content;
     background-color: antiquewhite;
@@ -80,7 +80,7 @@ body{
     border:solid 1px;
     background-color: rgb(204, 193, 32);
     padding: 20px;    
-    text-align: center;
+    text-align: end;
 }
 
 .contact-details-two {
@@ -95,18 +95,60 @@ body{
     padding: 3px;
 }
 
-.phone-two {
-    margin-left: 35px;
-}
-.website-two{
-    margin-left: 70px;
+.website-two,.phone-two{
+    text-align: start;
 }
 
 /* =======CARD THREE====== */
 
 .card-three {
-    border: solid 10px yellow;
+    border: solid 1px yellow;
     width: 50%;
     height: fit-content;
     margin-left: auto;
+}
+.user-profile-header-three {
+    background-color:rgb(118, 78, 228);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-direction: row-reverse;
+}
+
+.profile-company-three {
+    background-color: rgb(206, 83, 189);
+    padding: 20px;    
+    text-align:end;
+    border: solid 1px;
+    border-radius: 15px;
+}
+
+.contact-details-three {
+    padding: 20px;
+    background-color: rgb(199, 133, 236);
+    text-align:start;
+    border: solid 1px;
+    border-radius: 15px;
+}
+
+.address-three {
+    font-weight: 300;
+    font-size: 16px;
+    background-color: rgb(151, 127, 214);
+    padding: 3px;
+}
+
+.phone-three {
+    margin-left: 35px;
+    padding: 10px;
+    text-align: center;
+}
+.website-three{
+    margin-left: 70px;
+    padding: 10px;
+    text-align: end;
+}
+.email-three {
+    padding: 10px;
+    text-align: start;
 }

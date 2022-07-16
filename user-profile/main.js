@@ -16,7 +16,7 @@ userProfile().then( user => {
 <div class="card-one">
     <div class="user-profile-header">
         <div class="username"> @${user[2].username}</div>
-        <div class="name">${user[2].name}</div>
+        <div class="name">👦🏽 ${user[2].name}</div>
     </div>
     
     <div class="profile-company">
@@ -40,7 +40,7 @@ userProfile().then( user => {
 <div class="card-two">
     <div class="user-profile-header-two">
         <div class="username-two"> @${user[3].username}</div>
-        <div class="name-two">👦🏽${user[3].name}</div>
+        <div class="name-two">👩🏽 ${user[3].name}</div>
     </div>
     
     <div class="profile-company-two">
@@ -62,24 +62,24 @@ userProfile().then( user => {
 </div>
 
 <div class="card-three">
-    <div class="user-profile-header">
-        <div class="username"> @${user[5].username}</div>
-        <div class="name">${user[5].name}</div>
+    <div class="user-profile-header-three">
+        <div class="username-three"> @${user[5].username}</div>
+        <div class="name-three">👩🏽 ${user[5].name}</div>
     </div>
     
-    <div class="profile-company">
-        <div class="company-name">${user[5].company.name}</div>
-        <div class="username">${user[5].company.catchPhrase}</div>
-        <div class="username">${user[5].company.bs}</div>
+    <div class="profile-company-three">
+        <div class="company-name-three">${user[5].company.name}</div>
+        <div class="username-three">${user[5].company.catchPhrase}</div>
+        <div class="username-three">${user[5].company.bs}</div>
     </div>
     
-    <div class="contact-details">
-    <div class="email">📧 ${user[5].email}</div>
-    <div class="phone">📞 ${user[5].phone}</div>
-    <div class="website">💻 ${user[5].website}</div>
+    <div class="contact-details-three">
+    <div class="email-three">📧 ${user[5].email}</div>
+    <div class="phone-three">📞 ${user[5].phone}</div>
+    <div class="website-three">💻 ${user[5].website}</div>
     </div>
     
-    <div class="address">
+    <div class="address-three">
     ${user[5].address.street}, ${user[5].address.suite}, 
     ${user[5].address.city}, ${user[5].address.zipcode} 
     </div>
