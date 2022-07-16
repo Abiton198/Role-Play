@@ -16,6 +16,8 @@ html, body {
 }
 
 .my-color {
-    height: 20%;
-    width: 20%;
+    height: 10%;
+    width: 10%;
+    font-size: 10px;
+    /* height: auto; */
 }
