@@ -7,27 +7,26 @@ body {
     align-items: center;
     background: rgb(61, 126, 122);
     border: 5px solid white;
-    background-color: red;
 }
 
 /* =====MOBILE VIEW======== */
 
+/* grid-template = rows/colums 
+gr*/
 .container{
     display: grid;
     max-width: 800px;
     width: 90%;
     margin: 0 auto;
-    grid-template:200px auto auto 100px / auto auto 1em;
+    grid-template:200px auto auto 100px / auto auto ; 
     background-color: #111D4A;
     color: #FFFFFF;
     font-size: 16px;
-    row-gap: 1.5em;
-    
+    /* grid-gap: .5em 1em; */
 }
 
 
-/* flex-basis = allows change of height to width and vice versa in media query
-- set height/width = 0 to avoid over stretch of image when used as flex. */
+/*using grid to set up image */
 .image {
    object-fit: cover;
    grid-column: 1/-1;
@@ -86,32 +85,32 @@ span {
 
     .container {
         display: grid;
-        grid-template: 1em auto auto 150px 1em / 200px auto auto ;
-        grid-gap: 0 1em; 
+        grid-template:  auto auto 150px / 200px auto auto ;
+        grid-gap: 0 1em ; 
     }
 
     .image{  
-        grid-column: 1/2;
-        grid-row: 1/-1;
+        grid-column: 1 / 2;
+        grid-row: 1/6;
     }
 
     .tips-heading{
-       grid-row: 1;
-       grid-column: 2/-3;
+       grid-row: 2;
+       grid-column: 2/-2;
     }
 
     .tips-message {
-       grid-row: 4;
+       grid-row: 3;
        grid-column: 2;
     }
     .read {
         grid-row: 5;
         grid-column: 2;
-    /* grid-column: 2; */
+   
     }
     .card-btn{
-        /* justify-self: end; */
-        grid-row: 3;
-        justify-self: end;
+    
+        grid-row: 4;
+        
         }
 }
