@@ -8,25 +8,23 @@ body{
     grid-template-columns: 600px;
     grid-template-rows:  repeat(10, 200px);
     justify-content: center;
-    grid-template-columns:repeat(1, 75%);
-   
+    grid-template-columns:repeat(1, 45%); 
 }
 
 .my-show{
-     
-    
     border: solid gray 10px;
+    border-radius: 20px;
     padding: 10px;
     background-color: aquamarine;
     text-align: center;
     overflow-y: scroll;
-
+    font-size: 1.3rem;
 }
 
 .my-show-title {
     color: fuchsia;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
