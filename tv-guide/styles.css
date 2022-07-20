@@ -5,15 +5,22 @@ body{
 .my-shows {
     display:grid;
     grid-gap: 1em;
-    /* grid-template-columns: 600px; */
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 600px;
+    grid-template-rows:  repeat(10, 200px);
+    justify-content: center;
+    grid-template-columns:repeat(1, 75%);
+   
 }
 
 .my-show{
-    grid-row: span 10;
+     
+    
     border: solid gray 10px;
     padding: 10px;
     background-color: aquamarine;
+    text-align: center;
+    overflow-y: scroll;
+
 }
 
 .my-show-title {
@@ -21,4 +28,10 @@ body{
     text-align: center;
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+.my-show-summary {
+/* grid-column: span 4;
+    font-size: 1rem;
+    overflow-y: auto; */
 }
