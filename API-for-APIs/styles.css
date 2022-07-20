@@ -1,11 +1,43 @@
 body{
     background-color: plum;
 }
+.my-apis{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:  45%;
+    justify-content: center;
+}
 
 .my-api{
-
+display: grid;
+grid-template-rows: 3rem 1rem 4rem 3rem;
+grid-template-columns: repeat(3, calc(100%/3));
+border: solid 5px burlywood;
+background-color: rgb(87, 177, 165);
+grid-gap: 1rem;
+padding: 15px;
 }
 
 .my-api-name{
-    
+grid-column: 1/span 3;
+font-size: 1.5rem;
+text-align: center;
+}
+
+.my-api-name a:hover {
+    cursor: pointer;
+    color: red;
+}
+.my-api-description{
+    grid-row: 2;
+    grid-column: 1/ span 2;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+.my-api-auth{
+    grid-row: 4;
+}
+.my-api-https{
+    grid-row: 4/ span 2;
 }

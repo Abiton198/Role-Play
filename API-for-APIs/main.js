@@ -6,20 +6,30 @@ async function getAPIs(){
 }
 
 function getAPIHtml(myAPI){
-
+return `
+<div class="my-api">
+    <div class="my-api-name">
+        <a href="{myAPI.Link}" target="_blank"> 
+        ${myAPI.API} (${myAPI.Category})
+        </a></div>
+    <div class="my-api-description">${myAPI.Description}</div>
+    <div class="my-api-auth">Auth: ${myAPI.Auth}</div>
+    <div class="my-api-https">HTTPS? ${myAPI.HTTPS}</div>
+</div>`
 }
 
 function displayAPIs(myAPIs){
-    let sampleAPI = myAPIs.entries[0]
     myAPIs = myAPIs.entries
     document.body.innerHTML = `
-    <div class="my-api">
-        <div class="my-api-name">${sampleAPI.API} (${sampleAPI.Category})</div>
-        <div class="my-api-description">${sampleAPI.Description}</div>
-        <div class="my-api-auth">Auth: ${sampleAPI.Auth}</div>
-        <div class="my-api-https">HTTPS? ${sampleAPI.HTTPS}</div>
+    <div class="my-apis">
+        ${myAPIs.map(getAPIHtml).join('')}
     </div>`
 }
 getAPIs()
          .then(displayAPIs)
          .catch(e => console.log(`Error: ${e}`))
+
+         /*====NOTES===
+         
+         1. .map() == displays all items from the selected object/array/ takes a callback function 
+         2. <a> == linking the API to the main source*/
