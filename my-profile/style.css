@@ -116,6 +116,12 @@ font-weight: var(--fw-reg);
     font-family:var(--ff-secondary);
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
 /* =====INTRO SECTION==== */
 
 nav{
@@ -236,10 +242,44 @@ display: none;
         padding-left: 2em;
         padding-right: calc(200px + 4em);
     }
+
+
+.my-work{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+   
+}
+.portfolio{
+    border:solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.portfolio__item {
+    background: var(--clr-accent);
+    overflow: hidden;
+}
 
+/* to have a green background transition effect when image is clicked */
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
 
+/* prevent img not overflow when selected */
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+/* for img to have same effect when a tab is used to select item */
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
+}
 
 /*===INDEX=====
 
