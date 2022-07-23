@@ -122,12 +122,52 @@ font-weight: var(--fw-reg);
     margin-bottom: 2em;
 }
 
-/* =====INTRO SECTION==== */
+/* ====NAVIGATION BAR===== */
 
-nav{
-display: none;
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.logo{
+    width: 100px;
 }
 
+.nav{
+    position: fixed;
+    background-color: var(--clr-dark);
+    color: var(--clr-accent);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+   
+}
+
+.nav__link{
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+    
+}
+
+/* =====INTRO SECTION==== */
 .intro{
     position: relative;
 }
@@ -281,9 +321,86 @@ display: none;
 }
 }
 
+/* ======FOOTER====== */
+.footer{
+    background-color: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+/* footer hover effects when selected or highlighted */
+
+.footer__link {
+    
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0 ;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+/* box around the button == nav toggle-bar */
+.hamburger { 
+    display: block;
+    position: relative;
+}
+.nav-toggle {
+    padding: .25em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.hamburger::after,
+.hamburger::before,
+.hamburger {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::after {bottom:6px;}
+.hamburger::before{top: 6px;}
+
+
 /*===INDEX=====
 
 fs = font size
 bs = box shadow
 z-idex =position relative
+transform x(100%) = hides the item 
 */
