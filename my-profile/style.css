@@ -41,15 +41,18 @@ body{
     font-size: var(--fs-body);
     line-height: 1.6em;
 }
-
+/* making slides sroll when clicked */
+html{
+    scroll-behavior: smooth;
+}
 img {
     display: block;
     max-width: 100%;
-    top: 288px;
+    /* top: 288px;
     left: 33px;
     width: 249px;
     height: 249px;
-    opacity: 1;
+    opacity: 1; */
 }
 
 /* ===BUTTONS=== */
@@ -154,8 +157,7 @@ font-weight: var(--fw-reg);
     text-align: center;
     flex-direction: column;
     font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
-   
+    font-weight: var(--fw-bold);   
 }
 
 .nav__link{
@@ -185,7 +187,6 @@ font-weight: var(--fw-reg);
 
     img{
         grid-area: img;
-        /* position: relative; */
         min-width: 250px;
         z-index: 2;
         box-shadow: var(--bs);
@@ -241,10 +242,6 @@ font-weight: var(--fw-reg);
         margin-left: 2em;
         text-align: justify;
     }
-    /* .btn {
-        background: var(--clr-accent);
-
-    } */
 }
 
 /*=====ABOUT-ME====  */
@@ -283,16 +280,17 @@ font-weight: var(--fw-reg);
         padding-right: calc(200px + 4em);
     }
 
+/* ======MY WORK==== */
 
 .my-work{
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    text-align: center;
    
 }
 .portfolio{
-    border:solid red;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .portfolio__item {
@@ -361,40 +359,107 @@ font-weight: var(--fw-reg);
 }
 
 /* box around the button == nav toggle-bar */
-.hamburger { 
-    display: block;
-    position: relative;
-}
 .nav-toggle {
     padding: .25em;
     background: transparent;
     border: 0;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     right: 1em;
     top: 1em;
     z-index: 1000;
+    
+}
+
+/* making the nav toogle bar slide */
+.nav-open .nav{
+    transform: translateX(0) ;
+}
+
+/* to make the toggle-bar fixed without disappearing */
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-light);
+}
+
+.hamburger { 
+    display: block;
+    position: relative;
 }
 
 .hamburger::after,
 .hamburger::before,
 .hamburger {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
+
 .hamburger::before,
 .hamburger::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
+    /* color: #16e0bd; */
 }
 
 .hamburger::after {bottom:6px;}
 .hamburger::before{top: 6px;}
+
+/* making the toggle bar turn when clicked */
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+/* making it an X when it turns after click */
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+/* removes the button when toggle is clicked so as to remain an X */
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* centering my <p> */
+.portfolio-item-individual{
+    max-width: 600px;
+    margin-left: 0 auto;
+    margin-right:0 auto ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*===INDEX=====
