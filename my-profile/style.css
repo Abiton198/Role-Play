@@ -15,7 +15,7 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #16e060;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -170,7 +170,7 @@ font-weight: var(--fw-reg);
     position: fixed;
 }
 
-.nav__link{
+.nav__link{ 
     text-decoration: none;
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
@@ -333,7 +333,7 @@ font-weight: var(--fw-reg);
 
 /* ======FOOTER====== */
 .footer{
-    background-color: #111;
+    background-color: rgb(87, 75, 75);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
@@ -344,15 +344,18 @@ font-weight: var(--fw-reg);
 .footer__link {
     
     font-weight: var(--fw-bold);
+    font-size: 24px;
 }
 
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
+    color: greenyellow;
 }
 
 .footer__link:hover {
     text-decoration: underline;
+
 }
 .social-list {
     list-style: none;
