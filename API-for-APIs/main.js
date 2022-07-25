@@ -18,6 +18,7 @@ return `
 </div>`
 }
 
+// display my APIs
 function displayAPIs(myAPIs){
     myAPIs = myAPIs.entries
     document.body.innerHTML = `

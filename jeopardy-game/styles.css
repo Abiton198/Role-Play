@@ -4,6 +4,7 @@ html, body {
     background-color: lightgreen;
 }
 
+/* repeat(4, 250px/25%) = takes number & size of column/row ===gives same equal rows x 5*/
 .board {
     display: grid;
     grid-template-columns: repeat(5, 20%);
