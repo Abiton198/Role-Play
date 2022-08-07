@@ -24,6 +24,7 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +37,138 @@
     transform: rotate(360deg);
   }
 }
+
+/* =========HEADER======== */
+
+.personal-info, .contacts{
+  text-align: center;
+}
+
+.name {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.title {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(243, 191, 153, 1);
+}
+
+.email {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(245, 245, 245, 1);
+}
+
+/* =======BUTTONS */
+.email-btn ,.linked-btn {
+  width: 115px;
+  height: 34px;
+  left: 151px;
+  top: 468px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.linked-btn {
+  background: #5093E2;
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 17px
+
+}
+
+.linked-btn span {
+  padding: 1px;
+  color:  #5093E2;
+  margin: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  text-align: center;
+}
+/* creatig a gap between envelop icon and email */
+.email-btn span{
+  margin: 10px;
+}
+.linked-btn span {
+  background-color: rgba(80, 147, 226, 1);
+  color: white;
+}
+
+.contacts{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* ======MAIN CONTENT======= */
+.main-content {
+  margin-top: 0;
+  padding: 15px;
+  padding-top: 0;
+  color: rgba(220, 220, 220, 1);
+}
+.main-content p , h1{
+  margin:  0 10px;
+  padding: 5px 15px;
+}
+
+.main-content p {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.main-content h1 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+
+/* =======FOOTER====== */
+/* setting up the footer social icons */
+.icons {
+  background-color: rgba(22, 22, 25, 1);
+  display: flex;  
+  height: 94px;
+  align-items: center;
+  justify-content: center;
+}
+.social-list-item {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(145, 142, 155, 1);
+}
+
