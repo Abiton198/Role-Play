@@ -1,14 +1,24 @@
-// import { useState } from 'react'
+
 import Nav from './Nav'
+import Card from './Card'
 import './App.css'
+import Hero from './Hero'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
+  
   return (
     <>
         <Nav/>
-    
+        <Hero/>
+        <Card
+            img="Katie-img.jpg"
+            rating="5.0"
+            reviewCount={6}
+            location="USA"
+            title="Life Lessons with Katie Zaferes"
+            price={136}
+            
+        />
     </>
   )
 }
