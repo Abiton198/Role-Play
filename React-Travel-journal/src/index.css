@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.main-content {
+  width: 550px;
+  color: rgba(245, 245, 245, 1);
+  color: rgba(43, 40, 58, 1);
+}
+

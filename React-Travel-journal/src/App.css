@@ -1,0 +1,85 @@
+/* =====HEADER===== */
+.header {
+  display: flex;
+  background-color: rgba(245, 90, 90, 1);
+  justify-content: center;   
+  align-items: center; 
+  height: 55px;
+}
+.title {
+  font-size: 14.46px;
+  margin-left: 5px;
+  font-weight: 500;
+  color: white;
+}
+.icon {
+  color: white;
+}
+/* =======CARD====== */
+
+/* card arrangment */
+.image{
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  margin: 0 18px;
+  
+}
+
+.card {
+  display: flex;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.country-site {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* putting items into right sizes */
+.start-date, .end-date, .location, .view-link, .description {
+  font-size: 10.4px;
+}
+.loc-sign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px; 
+}
+.location-sign {
+  color: red;
+  width: 5px;
+  height: 5px;
+}
+.view-link{
+  color: rgba(218, 218, 218, 1);   
+}
+.location {
+  margin-left:15px; 
+}
+.view-link{
+  margin: 2px;
+  font-weight: 400;
+}
+.country {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.date {
+  display: flex;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.description{
+margin-top: 0;     
+}
